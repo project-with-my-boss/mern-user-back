@@ -22,9 +22,7 @@ app.get("/", (req, res) => {
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: ["http://localhost:8080", "https://mern-user-back.onrender.com"],
-}));
+app.use(cors());
 app.use("/api/users", userRoutes)
 
 
